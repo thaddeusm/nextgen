@@ -81,8 +81,8 @@ Rails.application.configure do
     config.logger = ActiveSupport::TaggedLogging.new(logger)
   end
     
-  config.action_mailer.default_url_options = { :host => 'readfeeddnu.herokuapp.com' }
-  Rails.application.routes.default_url_options[:host] = 'readfeeddnu.herokuapp.com'
+  config.action_mailer.default_url_options = { :host => 'gonextgen.herokuapp.com' }
+  Rails.application.routes.default_url_options[:host] = 'gonextgen.herokuapp.com'
 
   ActionMailer::Base.smtp_settings = {
   :address        => "smtp.sendgrid.net",
