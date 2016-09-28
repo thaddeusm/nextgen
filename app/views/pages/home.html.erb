@@ -1,24 +1,19 @@
-<div class="row">
-    <div class="col-xs-12 col-md-10 col-md-offset-1">
-        <% unless user_signed_in? %>
-            <div class="jumbotron">
-                <h1>be social</h1>
-                <p>read and write with your classmates in a <i>digital space</i></p>
-                <br>
-                <p>
-                    <%= link_to "Log in", new_user_session_path %> or 
-                    <%= link_to "Sign up", new_user_registration_path, class: "btn btn-success" %>
-                </p>
+<div class="centercontainer">
+    <div class="centerrow">
+        <div class="centercolumn welcome">
+            <div class="page-header text-center">
+                <div class="animated flipInX">
+                    <%= image_tag('justg.png', :alt => "Brand", :class => "inline-block pageimage") %>
+                </div>
+                <h1>
+                    <span class="textpop">Generation Next</span>
+                    <br>
+                    <small class="textsink"><i>companion app</i></small>
+                </h1>
             </div>
-        <% else %>
-            <div class="jumbotron">
-                <h1>Where are you going?</h1>
-                <br>
-                <p>
-                    <%= link_to "Newest Feed", @latest_feed, class: "btn btn-success" %>
-                    or <%= link_to "View All Feeds", feeds_path %>
-                </p>
-            </div>
-        <% end %>
+            <% unless user_signed_in? %>
+                <p class="text-center"><%= link_to "Get Started", new_user_registration_path, class: "btn btn-warning" %> or <%= link_to "Log in", new_user_session_path, class: "textpop" %></p>
+            <% end %>
+        </div>
     </div>
 </div>

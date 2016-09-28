@@ -1,13 +1,13 @@
 @import 'https://fonts.googleapis.com/css?family=Cabin|Lato';
 
-$brand-primary: #16A085;
-$brand-success: #F39C12;
-$brand-info: #1abc9c;
-$brand-warning: #F1C40F;
+$brand-primary: #FFE386;
+$brand-success: #312B2D;
+$brand-info: #25B8C4;
+$brand-warning: #EC5F2C;
 $brand-danger: #d9534f;
-$alert-success-bg: #BBF6EA;
-$alert-info-bg: #A8F4E5;
-$alert-warning-bg: #FBEDB5;
+$alert-success-bg: #4E4448;
+$alert-info-bg: #312B2D;
+$alert-warning-bg: #F7B59F;
 $alert-danger-bg: #E99B99;
 $alert-success-text: #1D1F1E;
 $alert-info-text: #1D1F1E;
@@ -15,6 +15,19 @@ $alert-warning-text: #1D1F1E;
 $alert-danger-text: #1D1F1E;
 $well-bg: #FFFFFF;
 $font-family-sans-serif: 'Lato', sans-serif;
+$navbar-default-brand-color: #FEF1C5;
+$navbar-default-brand-hover-color: #FFFAEB;
+$navbar-default-link-color: #61565A;
+$navbar-default-link-hover-color: #312B2D;
+$navbar-default-link-active-bg: rgba(1, 5, 1, 0.1);
+$navbar-inverse-bg: #312B2D;
+$btn-success-color: #FFFFFF;
+$font-size-base: 16px;
+$panel-bg: rgba(255, 255, 255, 0.5);
+$panel-default-heading-bg: #FFD852;
+$panel-footer-bg: #4E4448;
+$panel-default-border: #9C8F94;
+$navbar-height: 70px;
 
 
 @import 'bootstrap-sprockets';
@@ -27,13 +40,15 @@ html, body {
 }
 
 body {
-    background: repeating-linear-gradient(
+/*    background: repeating-linear-gradient(
   -55deg,
   #FFFFFF,
   #F6FEFC 5px,
   #FFFFFF 5px,
   #F6FEFC 10px
-);
+);*/
+    background-color: #25b8c4;
+    background-image: image-url("white-brushed.png");
 }
 
 .innercontainer {
@@ -41,20 +56,12 @@ body {
 }
 
 .brandimage {
-    margin-top: -12px;
+    margin-top: -2px;
     width: 45px;
 }
 
-.navbar-default {
-    background: rgb(248,248,248); /* Old browsers */
-background: -moz-linear-gradient(-45deg,  rgba(248,248,248,1) 0%, rgba(250,235,214,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(-45deg,  rgba(248,248,248,1) 0%,rgba(250,235,214,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(135deg,  rgba(248,248,248,1) 0%,rgba(250,235,214,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#FAEBD6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-}
-
 #error_explanation h2 {
-  display: none;
+    display: none;
 }
 
 .noresize {
@@ -69,12 +76,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', end
     background: #FBEDB5;
 }
 
-.headerdiv {
-    background: rgb(248,248,248); /* Old browsers */
-background: -moz-linear-gradient(-45deg,  rgba(248,248,248,1) 0%, rgba(250,235,214,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(-45deg,  rgba(248,248,248,1) 0%,rgba(250,235,214,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(135deg,  rgba(248,248,248,1) 0%,rgba(250,235,214,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#FAEBD6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+.pagebrand {
+    padding-bottom: 30px;
+    margin-top: -35px; 
 }
 
 .footerdiv {
@@ -127,7 +131,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', end
     height: 50px;
     width: 100%;
     text-align: center;
-    background: rgba(168,244, 229, 0.9);
+    color: white;
 }
 
 #container {
@@ -157,4 +161,55 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', end
 
 .indent-name {
     padding-left: 10px;
+}
+
+.navbar-brand {
+    text-shadow: 0px 0px 5px #4E4448;
+}
+
+.reviewsdiv {
+    padding-bottom: 40px;
+}
+
+.pageimage {
+    width: 100px;
+}
+
+.btn {
+    box-shadow: 0 2px 0 0 #4E4448;
+}
+
+.btn-primary {
+    background: #25B8C4;
+}
+
+.page-header {
+    color: #FFFFFF;
+}
+
+.textpop {
+    text-shadow: 1px 1px 3px #312B2D;
+}
+
+.textsink {
+    text-shadow: 0px 0px 2px #FFFFFF;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #FFFFFF;
+    text-shadow: 1px 2px 3px #312B2D;
+}
+
+.alert {
+    width: 100%;
+    position: fixed;
+    z-index: 9000;
+    height: 70px;
+    padding: 24px;
+    border: none;
+    -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    -o-animation-delay: 3s;
+    -ms-animation-delay: 3s;
 }

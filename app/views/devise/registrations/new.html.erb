@@ -1,6 +1,11 @@
 <div class="centercontainer">
     <div class="centerrow">
         <div class="centercolumn">
+            <%= link_to root_path do %>
+                <div class="text-center pagebrand animated flipInX">
+                    <%= image_tag('justg.png', :alt => "Brand", :class => "inline-block pageimage") %>
+                </div>
+            <% end %>
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h2 class="panel-title">Sign up</h2>
@@ -26,13 +31,13 @@
                       </div>
 
                       <div class="form-group">
-                        <%= f.submit "Sign up", class: "btn btn-success btn-block" %>
+                        <%= f.submit "Sign up", class: "btn btn-warning btn-block" %>
                         <br>
+                        <% end %>
                         <div class="centerme">
-                            <%= link_to "What about my privacy?", pages_privacy_path %>
+                            <%= link_to "What about my privacy?", pages_privacy_path, class: "btn btn-info btn-sm" %>
                         </div>
-                      </div>
-                    <% end %>
+                    </div>
                 </div>
                 <div class="panel-footer">
                     <%= render "devise/shared/links" %>
