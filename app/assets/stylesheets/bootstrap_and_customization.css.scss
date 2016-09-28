@@ -16,11 +16,11 @@ $alert-danger-text: #1D1F1E;
 $well-bg: #FFFFFF;
 $font-family-sans-serif: 'Lato', sans-serif;
 $navbar-default-brand-color: #FEF1C5;
-$navbar-default-brand-hover-color: #FFFAEB;
+$navbar-default-brand-hover-color: #FFF5D7;
 $navbar-default-link-color: #61565A;
-$navbar-default-link-hover-color: #312B2D;
-$navbar-default-link-active-bg: rgba(1, 5, 1, 0.1);
-$navbar-inverse-bg: #312B2D;
+$navbar-default-link-hover-color: #FFF5D7;
+$navbar-default-link-active-bg: rgba(255, 245, 215, 0.5);
+$navbar-default-bg: transparent;
 $btn-success-color: #FFFFFF;
 $font-size-base: 16px;
 $panel-bg: rgba(255, 255, 255, 0.5);
@@ -56,7 +56,7 @@ body {
 }
 
 .brandimage {
-    margin-top: -2px;
+    margin-top: -10px;
     width: 45px;
 }
 
