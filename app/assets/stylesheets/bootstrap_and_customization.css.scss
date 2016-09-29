@@ -28,7 +28,7 @@ $panel-default-heading-bg: #FFD852;
 $panel-footer-bg: #4E4448;
 $panel-default-border: #9C8F94;
 $navbar-height: 70px;
-$dropdown-bg: transparent;
+$dropdown-bg: rgba(255, 245, 215, 0.5);
 
 
 @import 'bootstrap-sprockets';
@@ -122,19 +122,6 @@ body {
     max-width: 900px;
 }
 
-.alert {
-    -webkit-animation-delay: 3s;
-    -moz-animation-delay: 3s;
-    -o-animation-delay: 3s;
-    -ms-animation-delay: 3s;
-    position: fixed;
-    z-index: 9000;
-    height: 50px;
-    width: 100%;
-    text-align: center;
-    color: white;
-}
-
 #container {
     min-height: 100%;
     min-width: 100%;
@@ -214,8 +201,9 @@ a:hover {
     -moz-animation-delay: 3s;
     -o-animation-delay: 3s;
     -ms-animation-delay: 3s;
+    color: white;
 }
 
 .footer-space {
-    padding-bottom: 30px;
+    margin-bottom: 70px;
 }

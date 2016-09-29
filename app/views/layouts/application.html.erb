@@ -8,12 +8,12 @@
     <%= javascript_include_tag 'application' %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= favicon_link_tag 'justg.png' %>
+    <% flash.each do |name, msg| %>
+      <%= content_tag(:div, msg, class: "alert alert-info text-center animated fadeOut") %>
+    <% end %>
     <% if user_signed_in? %>
       <%= render 'layouts/header' %>
     <% end %>
-    <% flash.each do |name, msg| %>
-          <%= content_tag(:div, msg, class: "alert alert-info animated fadeOut") %>
-        <% end %>
   </head>
 
   <body>
