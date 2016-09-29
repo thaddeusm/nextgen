@@ -19,8 +19,21 @@ $navbar-default-brand-color: #FEF1C5;
 $navbar-default-brand-hover-color: #FFF5D7;
 $navbar-default-link-color: #61565A;
 $navbar-default-link-hover-color: #FFF5D7;
-$navbar-default-link-active-bg: rgba(255, 245, 215, 0.5);
+$navbar-default-link-active-bg: rgba(239, 95, 44, 0.5);
+$navbar-default-link-active-hover: #61565A;
+$navbar-default-link-active-color: #FFF5D7;
+$dropdown-link-hover-color: #FFF5D7;
+$dropdown-link-active-color: #61565A;
+$dropdown-link-color: #61565A; 
 $navbar-default-bg: transparent;
+$dropdown-bg: rgba(239, 95, 44, 0.5);
+$dropdown-border: white;
+$dropdown-link-hover-bg: rgba(239, 95, 44, 0.5);
+$dropdown-link-hover-color: #FFF5D7;
+$dropdown-link-active-color: #FFF5D7;
+$dropdown-toggle-active-color: #61565A;
+$navbar-default-toggle-hover-bg: #25B8C4;
+$dropdown-toggle-active-hover-color: #FFF5D7;
 $btn-success-color: #FFFFFF;
 $font-size-base: 16px;
 $panel-bg: rgba(255, 255, 255, 0.5);
@@ -28,7 +41,7 @@ $panel-default-heading-bg: #FFD852;
 $panel-footer-bg: #4E4448;
 $panel-default-border: #9C8F94;
 $navbar-height: 70px;
-$dropdown-bg: rgba(255, 245, 215, 0.5);
+
 
 
 @import 'bootstrap-sprockets';
