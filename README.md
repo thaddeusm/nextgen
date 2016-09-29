@@ -1,8 +1,10 @@
-![Read Feed](/app/assets/images/textonlygit.png)
+![Next Generation](/app/assets/images/justg.png)
 
-# Read Feed
+# Next Generation
 
-Read Feed was created as a simple way for educators to deliver learning content and facilitate interactions between learners.  Concerning design and development, the app attempts to apply:
+Next Generation is largely based on another simple Rails app I created to help educators share resources with and invite online interations between learners.
+
+Concerning design and development, the app attempts to apply:
 
 * mobile-first development through Bootstrap
 
@@ -12,4 +14,6 @@ Read Feed was created as a simple way for educators to deliver learning content 
 
 * flexibility to include all learning mediums
 
-This version is considered 'beta', being used by one pilot institution in hopes of creating a global version in the future.
+This app will be used for a specific pre-service teacher training program in Chernivtsi, Ukraine.
+
+More info at ![English Upgrade](http://www.enupgrade.com)
