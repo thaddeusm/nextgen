@@ -28,6 +28,7 @@ $panel-default-heading-bg: #FFD852;
 $panel-footer-bg: #4E4448;
 $panel-default-border: #9C8F94;
 $navbar-height: 70px;
+$dropdown-bg: transparent;
 
 
 @import 'bootstrap-sprockets';
@@ -148,6 +149,7 @@ body {
     left: 0;
     text-align: center;
     position: absolute;
+    margin-top: 50px;
 }
 
 .responsesdiv {
@@ -212,4 +214,8 @@ a:hover {
     -moz-animation-delay: 3s;
     -o-animation-delay: 3s;
     -ms-animation-delay: 3s;
+}
+
+.footer-space {
+    padding-bottom: 30px;
 }
