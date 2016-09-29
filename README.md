@@ -1,4 +1,4 @@
-![Next Generation](/app/assets/images/justg.png)
+![Next Generation](/app/assets/images/justgsmall.png)
 
 # Next Generation
 
@@ -15,5 +15,3 @@ Concerning design and development, the app attempts to apply:
 * flexibility to include all learning mediums
 
 This app will be used for a specific pre-service teacher training program in Chernivtsi, Ukraine.
-
-More info at ![English Upgrade](http://www.enupgrade.com)
