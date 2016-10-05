@@ -2,9 +2,9 @@
     <div class="row">
         <div class="col-xs-12 col-md-10 col-md-offset-1">
             <div class="page-header">
-                <h1>"<%= @feed.title %>"
+                <h1 class="textpop">"<%= @feed.title %>"
                 <br>
-                    <small class="indent-name">by <%= @feed.user.name %></small>
+                    <small class="indent-name textsink">by <%= @feed.user.name %></small>
                 </h1>
             </div>
             <div class="well">
@@ -23,7 +23,7 @@
             <br>
             <div class="btn-group btn-group-justified">
                 <% if current_user.try(:admin?) %>
-                    <%= link_to 'Back', feeds_path, class: "btn btn-primary" %>
+                    <%= link_to 'Back', feeds_path, class: "btn btn-info" %>
                     <%= link_to 'Edit', edit_feed_path(@feed), class: "btn btn-success" %>
                     <%= link_to 'Delete', @feed, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
                 <% else %>
@@ -33,7 +33,7 @@
             <br>
             <br>
             <div class="page-header">
-                <h3>Responses</h3>
+                <h3 class="textpop">Responses</h3>
             </div>
             <div class="responsesdiv">
                 <%= render :partial => 'responses/response', :collection => @feed.responses %>

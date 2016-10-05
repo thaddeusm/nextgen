@@ -7,11 +7,11 @@
             <div class="row">
                 <div class="col-xs-12">
                     <% @feeds.each do |feed| %>
-                        <div class="jumbotron">
-                            <h2>"<%= link_to feed.title, feed %>"</h2>
+                        <div class="jumbotron feed-index-box">
+                            <h2 class="textpop">"<%= link_to feed.title, feed %>"</h2>
                             <br>
-                            <p>This week you will practice writing <strong><i><%= feed.focus %></i></strong>.</p>
-                            <%= link_to "Read More", feed, class: "btn btn-default" %>
+                            <p>Review and practice writing <strong><i><%= feed.focus %></i></strong>.</p>
+                            <%= link_to "Read More", feed, class: "btn btn-danger" %>
                         </div>
                     <% end %>
                 </div>
