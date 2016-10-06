@@ -6,7 +6,7 @@ $brand-info: #25B8C4;
 $brand-warning: #EC5F2C;
 $brand-danger: #d9534f;
 $alert-success-bg: #4E4448;
-$alert-info-bg: #4E4448;
+$alert-info-bg: #312B2D;
 $alert-warning-bg: #F7B59F;
 $alert-danger-bg: #E99B99;
 $alert-success-text: #1D1F1E;
@@ -15,25 +15,9 @@ $alert-warning-text: #1D1F1E;
 $alert-danger-text: #1D1F1E;
 $well-bg: #FFFFFF;
 $font-family-sans-serif: 'Lato', sans-serif;
-$navbar-default-brand-color: #FEF1C5;
-$navbar-default-brand-hover-color: #FFF5D7;
-$navbar-default-link-color: #61565A;
-$navbar-default-link-hover-color: #FFF5D7;
-$navbar-default-link-active-bg: rgba(239, 95, 44, 0.5);
-$navbar-default-link-active-hover: #61565A;
-$navbar-default-link-active-color: #FFF5D7;
-$dropdown-link-hover-color: #FFF5D7;
-$dropdown-link-active-color: #61565A;
-$dropdown-link-color: #61565A; 
-$navbar-default-bg: transparent;
-$dropdown-bg: rgba(239, 95, 44, 0.5);
-$dropdown-border: white;
-$dropdown-link-hover-bg: rgba(239, 95, 44, 0.5);
-$dropdown-link-hover-color: #FFF5D7;
-$dropdown-link-active-color: #FFF5D7;
-$dropdown-toggle-active-color: #61565A;
-$navbar-default-toggle-hover-bg: #25B8C4;
-$dropdown-toggle-active-hover-color: #FFF5D7;
+$navbar-inverse-bg: #312B2D;
+$navbar-inverse-link-color: #D8D8D8;
+
 $btn-success-color: #FFFFFF;
 $font-size-base: 16px;
 $panel-bg: rgba(255, 255, 255, 0.5);
@@ -197,12 +181,6 @@ body {
     text-shadow: 0px 0px 2px #FFFFFF;
 }
 
-a:hover {
-    text-decoration: none;
-    color: #FFFFFF;
-    text-shadow: 1px 2px 3px #312B2D;
-}
-
 .alert {
     width: 100%;
     position: fixed;
@@ -223,17 +201,10 @@ a:hover {
 }
 
 .feed-index-box {
-    background: rgba(255, 255, 255, 0.5);
-}
-
-.navback {
-    background: rgba(255, 255, 255, 0.9);
-}
-
-.dropback {
-    background: rgba(255, 255, 255, 0.45);
+    background: rgba(255, 255, 255, .6);
 }
 
 .logged-in {
     padding-top: 40px;
 }
+

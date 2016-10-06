@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-fixed-top navback dropback">
+<nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
             <button id="navCol" type="button" class="navbar-toggle collapsed " data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -14,7 +14,7 @@
             </div>
             <%= link_to "Generation Next", root_path, class: "navbar-brand" %>
         </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1 textsink">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <% if current_user.try(:admin?) %>
                     <li>

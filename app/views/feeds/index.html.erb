@@ -1,17 +1,17 @@
 <div class="row">
     <div class="col-xs-12 col-md-10 col-md-offset-1 footer-space">
         <% if user_signed_in? %>
-            <div class="page-header">
+            <div class="page-header textpop">
                 <h1>Feeds</h1>
             </div>
             <div class="row">
                 <div class="col-xs-12">
                     <% @feeds.each do |feed| %>
                         <div class="jumbotron feed-index-box">
-                            <h2 class="textpop">"<%= link_to feed.title, feed %>"</h2>
+                            <h2 class="textsink">"<%= feed.title %>"</h2>
                             <br>
-                            <p>Review and practice writing <strong><i><%= feed.focus %></i></strong>.</p>
-                            <%= link_to "Read More", feed, class: "btn btn-danger" %>
+                            <p>Respond and practice writing <strong><i><%= feed.focus %></i></strong>.</p>
+                            <%= link_to "Dive in", feed, class: "btn btn-danger" %>
                         </div>
                     <% end %>
                 </div>

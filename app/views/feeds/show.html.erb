@@ -26,10 +26,10 @@
                     <%= link_to 'Back', feeds_path, class: "btn btn-info" %>
                     <%= link_to 'Edit', edit_feed_path(@feed), class: "btn btn-success" %>
                     <%= link_to 'Delete', @feed, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
-                <% else %>
-                    <%= link_to 'Write Your Response', new_feed_response_path(@feed), class: "btn btn-primary" %>
                 <% end %>
             </div>
+            <br>
+            <%= link_to 'Write Your Response', new_feed_response_path(@feed), class: "btn btn-success btn-block" %>
             <br>
             <br>
             <div class="page-header">

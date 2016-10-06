@@ -9,10 +9,12 @@
         </h4> 
     </div>
     <div class="panel-body">
-        <%= raw(response.body) %>
+        <div class="well">
+            <%= raw(response.body) %>
+        </div>
         <p>
             <% if response.user == current_user or current_user.try(:admin?) %>
-                <br><%= link_to 'Delete', [@feed, response], class: 'btn btn-danger btn-sm', method: :delete, data: { confirm: "Are you sure?" } %>
+                <%= link_to 'Delete', [@feed, response], class: 'btn btn-danger btn-sm', method: :delete, data: { confirm: "Are you sure?" } %>
             <% end %>
         </p>
     </div>
