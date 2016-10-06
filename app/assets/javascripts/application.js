@@ -21,6 +21,12 @@ $(document).ready(function() {
     setTimeout(function() {
         $(".alert").alert('close');
     }, 4000);
+$('nav').removeClass('dropback');
+
+    $("#navCol").on("click", function() {
+        $('nav').addClass('dropback');
+    });
+
 
             // hide .navbar first
         $("nav").removeClass('navback');
