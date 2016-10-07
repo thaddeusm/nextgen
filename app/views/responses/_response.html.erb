@@ -18,16 +18,12 @@
             <% end %>
         </p>
     </div>
-    <% if current_user.try(:admin?) or current_user == response.user(response) or response.user.try(:admin?) %>
-        <div class="panel-footer">
-            <%= link_to 'Add a Reply', new_response_response_path(response) %>
-        </div>
-    <% end %>
+    <div class="panel-footer">
+        <%= link_to 'Add a Reply', new_response_response_path(response) %>
+    </div>
 </div>
-<% unless response.responses.empty? %>
-    <% if response.user == current_user or current_user.try(:admin?) or response.user.try(:admin?) %> 
-        <div class="indentit">
-            <%= render :partial => 'responses/response', :collection => response.responses %>
-        </div>
-    <% end %>
+<% unless response.responses.empty? %> 
+    <div class="indentit">
+        <%= render :partial => 'responses/response', :collection => response.responses %>
+    </div>
 <% end %>

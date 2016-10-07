@@ -1,6 +1,6 @@
 @import 'https://fonts.googleapis.com/css?family=Cabin|Lato';
 
-$brand-primary: #FFE386;
+$brand-primary: #FFD447;
 $brand-success: #312B2D;
 $brand-info: #25B8C4;
 $brand-warning: #EC5F2C;
@@ -174,7 +174,7 @@ body {
 }
 
 .textpop {
-    text-shadow: 1px 1px 3px #312B2D;
+    text-shadow: 1px 1px 2px #312B2D;
 }
 
 .textsink {
@@ -206,4 +206,14 @@ body {
 
 .logged-in {
     padding-top: 40px;
+}
+
+#profileImage {
+    width: 40%;
+    margin-left: 30%;
+}
+
+.icon {
+    padding-left: 5px;
+    padding-right: 5px;
 }
