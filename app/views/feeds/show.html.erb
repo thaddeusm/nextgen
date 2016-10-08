@@ -35,9 +35,13 @@
             <div class="page-header">
                 <h3 class="textpop">Responses</h3>
             </div>
-            <div class="responsesdiv">
-                <%= render :partial => 'responses/response', :collection => @feed.responses %>
-            </div>
+            <% if @feed.responses.exists? %>
+                <div class="responsesdiv">
+                    <%= render :partial => 'responses/response', :collection => @feed.responses %>
+                </div>
+            <% else %>
+                <blockquote>No responses yet <span class="fa fa-frown-o frowny"></span></blockquote>
+            <% end %>
         </div>
     </div>
 <% else %>
