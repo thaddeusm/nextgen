@@ -1,6 +1,9 @@
 <% if current_user.try(:admin?) %>
     <div class="row">
         <div class="col-xs-12 col-md-10 col-md-offset-1">
+            <div class="page-header">
+                <h2>Review responses</h2>
+            </div>
             <% @responses.reverse_each do |response| %>
                 <% if response.responses.empty? %>
                     <% unless response.user.name == "Thaddeus McCleary" %>
