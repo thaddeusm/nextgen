@@ -39,13 +39,13 @@
                             <% unless current_user.try(:admin?) %>
                                 <li>
                                     <%= link_to profile_url(current_user.name) do %>
-                                        <span class="glyphicon glyphicon-pencil"></span> My Writings
+                                        <span class="glyphicon glyphicon-pencil"></span> My Responses
                                     <% end %>
                                 </li>
                             <% else %>
                                 <li>
                                     <%= link_to reviews_show_path do %>
-                                        <span class="glyphicon glyphicon-pencil"></span> Review Writings
+                                        <span class="glyphicon glyphicon-pencil"></span> Review Responses
                                     <% end %>
                                 </li>
                             <% end %>

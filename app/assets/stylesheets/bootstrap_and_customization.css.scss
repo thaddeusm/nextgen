@@ -1,6 +1,6 @@
 @import 'https://fonts.googleapis.com/css?family=Cabin|Lato';
 
-$brand-primary: #FFD447;
+$brand-primary: #312B2D;
 $brand-success: #312B2D;
 $brand-info: #25B8C4;
 $brand-warning: #EC5F2C;
@@ -13,7 +13,7 @@ $alert-success-text: #1D1F1E;
 $alert-info-text: #1D1F1E;
 $alert-warning-text: #1D1F1E;
 $alert-danger-text: #1D1F1E;
-$well-bg: #FFFFFF;
+$well-bg: rgba(255, 255, 255, 0.8);
 $font-family-sans-serif: 'Lato', sans-serif;
 $navbar-inverse-bg: #312B2D;
 $navbar-inverse-link-color: #D8D8D8;
@@ -22,7 +22,7 @@ $btn-success-color: #FFFFFF;
 $font-size-base: 16px;
 $panel-bg: rgba(255, 255, 255, 0.5);
 $panel-default-heading-bg: #FFD852;
-$panel-footer-bg: #4E4448;
+$panel-footer-bg: #FFD852;
 $panel-default-border: #9C8F94;
 $navbar-height: 70px;
 
@@ -67,7 +67,7 @@ body {
 }
 
 .indentit {
-    padding-left: 20px;
+    
 }
 
 .indentit .panel-heading {
@@ -174,7 +174,7 @@ body {
 }
 
 .textpop {
-    text-shadow: 1px 1px 2px #312B2D;
+    text-shadow: 1px 1px 2px #FFD852;
 }
 
 .textsink {
