@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'pages/privacy'
   get 'reviews/show'
   get 'responses/show'
+  get 'responses/edit'
 
   resources :responses do
     resources :responses

@@ -14,7 +14,7 @@
         </div>
         <p>
             <% if response.user == current_user or current_user.try(:admin?) %>
-                <%= link_to 'Delete', [@feed, response], class: 'btn btn-danger btn-sm', method: :delete, data: { confirm: "Are you sure?" } %>
+                <%= link_to 'Edit', edit_feed_response_path(@feed, response), class: 'btn btn-success btn-sm' %> | <%= link_to 'Delete', [@feed, response], class: 'btn btn-danger btn-sm', method: :delete, data: { confirm: "Are you sure?" } %>
             <% end %>
         </p>
     </div>
