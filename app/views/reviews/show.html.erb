@@ -1,7 +1,7 @@
 <% if current_user.try(:admin?) %>
     <div class="row">
         <div class="col-xs-12 col-md-10 col-md-offset-1 footer-space">
-            <div class="page-header textpop">
+            <div class="page-header headertitle">
                 <h2>Review responses</h2>
             </div>
             <% @responses.reverse_each do |response| %>

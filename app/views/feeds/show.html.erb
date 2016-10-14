@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-xs-12 col-md-10 col-md-offset-1 footer-space">
             <div class="page-header">
-                <h1 class="textpop">"<%= @feed.title %>"
+                <h1 class="headertitle">"<%= @feed.title %>"
                 <br>
                     <small class="indent-name textsink">by <%= @feed.user.name %></small>
                 </h1>
@@ -33,7 +33,7 @@
             <br>
             <br>
             <div class="page-header">
-                <h3 class="textpop">Responses</h3>
+                <h3 class="headertitle">Responses</h3>
             </div>
             <% if @feed.responses.exists? %>
                 <div class="responsesdiv">
