@@ -18,13 +18,11 @@ class ResponsesController < ApplicationController
   end
 
   def edit
-    @feed = Feed.find(params[:feed_id])
-    @response = @parent.responses.find(params[:id])
+    @response = Response.find(params[:id])
   end
 
   def update
-    @feed = Feed.find(params[:feed_id])
-    @response = @parent.responses.find(params[:id])
+    @response = Response.find(params[:id])
     
     if @response.update(response_params)
       redirect_to feed_path(@response.feed), notice: 'Response was successfully updated.'

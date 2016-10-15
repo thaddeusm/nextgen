@@ -1,14 +1,6 @@
 <div class="centercontainer responsesdiv">
     <div class="centerrowfeeds">
-        <div class="centercolumnfeeds">
-            <div class="jumbotron feed-index-box"> 
-                <p>
-                    <%= raw(@parent.prompt) rescue nil %>
-                    <%= raw(@parent.body) rescue nil %>
-                    <br>
-                </p>
-                <p class="text-right">- <i><%= @parent.user.name rescue nil %></i></p>
-            </div>
+        <div class="centercolumnfeeds moretop">
         	<div class="panel panel-default">
                 <div class="panel-heading">
                     <h2 class="panel-title">Edit Your Response</h2>
