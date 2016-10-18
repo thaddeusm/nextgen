@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   end
 
   get 'pages/privacy'
-  get 'reviews/show'
   get 'responses/show'
   get 'responses/edit'
 
@@ -25,8 +24,6 @@ Rails.application.routes.draw do
   get ':name', to: 'profiles#show', as: :profile
 
   mount Bootsy::Engine => '/bootsy', as: 'bootsy'
-
-  get 'reviews/show'
 
   resources :reviews do
     resources :reviews

@@ -34,14 +34,16 @@
     <br>
     <br>
     <div class="btn-group btn-group-justified">
-        <% if current_user.try(:admin?) %>
+        <% if current_user.try(:admin?) or current_user == @plan.user %>
             <%= link_to 'Back', :back, class: "btn btn-info" %>
             <%= link_to 'Edit', edit_plan_path(@plan), class: "btn btn-success" %>
             <%= link_to 'Delete', @plan, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
         <% end %>
     </div>
     <br>
-    <%= link_to 'Write a Review', new_plan_review_path(@plan), class: "btn btn-success btn-block" %>
+    <% unless current_user == @plan.user %>
+      <%= link_to 'Write a Review', new_plan_review_path(@plan), class: "btn btn-success btn-block" %>
+    <% end %>
     <br>
     <br>
     <div class="page-header">
