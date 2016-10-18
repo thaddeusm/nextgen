@@ -47,12 +47,17 @@
         </div>
     </div>
 <% else %>
-    <div class="jumbotron">
-        <h1>be social</h1>
-        <p>read and write with your classmates in a <i>digital space</i></p>
-        <p>
-            <%= link_to "Log in", new_user_session_path %> or 
-            <%= link_to "Sign up", new_user_registration_path, class: "btn btn-success btn-lg" %>
-        </p>
-    </div>
+    <div class="page-header text-center">
+                    <div class="animated flipInX">
+                        <%= image_tag('justg.png', :alt => "Brand", :class => "inline-block pageimage") %>
+                    </div>
+                    <h1>
+                        <span class="headertitle">Generation Next</span>
+                        <br>
+                        <small class="textsink"><i>companion app</i></small>
+                    </h1>
+                </div>
+                    <p class="text-center">
+                        <%= link_to "Get Started", new_user_registration_path, class: "btn btn-warning" %> or <%= link_to "Log in", new_user_session_path, class: "textpop" %>
+                    </p>
 <% end %>

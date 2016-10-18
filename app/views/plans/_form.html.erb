@@ -1,0 +1,78 @@
+<%= form_for(plan) do |f| %>
+  <% if plan.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(plan.errors.count, "error") %> prohibited this plan from being saved:</h2>
+
+      <ul>
+      <% plan.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="form-group">
+    <%= f.label :topic %>
+    <%= f.text_field :topic, class: "form-control", placeholder: "What is the topic of the lesson?" %>
+  </div>
+  <hr>
+  <div>
+    <ul class="nav nav-pills">
+      <li role="create plan", class="active"><a href="#goalArea" aria-controls="goalArea" role="tab" data-toggle="tab">Goals</span></a></li>
+      <li role="create plan" class="inactive"><a href="#materialsArea" aria-controls="materialsArea" role="tab" data-toggle="tab">Materials</a></li>
+      <li role="presentation" class="dropdown inactive">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+          Activities <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li role="create plan"><a href="#listeningArea" aria-controls="listeningArea" role="tab" data-toggle="tab">Listening</a></li>
+          <li role="create plan"><a href="#speakingArea" aria-controls="speakingArea" role="tab" data-toggle="tab">Speaking</span></a></li>
+          <li role="create plan"><a href="#readingArea" aria-controls="readingArea" role="tab" data-toggle="tab">Reading</a></li>
+          <li role="create plan"><a href="#writingArea" aria-controls="writingArea" role="tab" data-toggle="tab">Writing</a></li>
+        </ul>
+      </li>
+      <li role="create plan" class="inactive"><a href="#assessmentArea" aria-controls="assessmentArea" role="tab" data-toggle="tab">Assessment</a></li>
+    </ul>
+    <br>
+    <div class="tab-content">
+
+        <div role="tabpanel" class="tab-pane fade in active" id="goalArea">
+            <%= f.bootsy_area :goal, class:"form-control", rows: "7", placeholder: "Include broad and specific lesson goals.", editor_options: { image: false, color: false } %>
+            <br>
+        </div>
+
+        <div role="tabpanel" class="tab-pane fade" id="materialsArea">
+            <%= f.bootsy_area :materials, class:"form-control", rows: "7", placeholder: "What materials are necessary for the lesson activities?", editor_options: { image: false, color: false } %>
+            <br>
+        </div>
+
+        <div role="tabpanel" class="tab-pane fade" id="listeningArea">
+            <%= f.bootsy_area :listening, class:"form-control", rows: "7", placeholder: "Describe any listening activities included in your lesson.  When should the activity occur?", editor_options: { image: false, color: false } %>
+            <br>
+        </div>
+
+        <div role="tabpanel" class="tab-pane fade" id="speakingArea">
+            <%= f.bootsy_area :speaking, class:"form-control", rows: "7", placeholder: "Describe any speaking activities included in your lesson.  When should the activity occur?", editor_options: { image: false, color: false } %>
+            <br>
+        </div>
+
+        <div role="tabpanel" class="tab-pane fade" id="readingArea">   
+            <%= f.bootsy_area :reading, class:"form-control", rows: "7", placeholder: "Describe any reading activities included in your lesson.  When should the activity occur?", editor_options: { image: false, color: false } %>
+            <br>
+        </div>
+
+        <div role="tabpanel" class="tab-pane fade" id="writingArea">   
+            <%= f.bootsy_area :writing, class:"form-control", rows: "7", placeholder: "Describe any writing activities included in your lesson.  When should the activity occur?", editor_options: { image: false, color: false } %>
+            <br>
+        </div>
+
+        <div role="tabpanel" class="tab-pane fade" id="assessmentArea">   
+            <%= f.bootsy_area :assessment, class:"form-control", rows: "7", placeholder: "Describe any assessments  included in your lesson (pre, formative, post).  When should the activity occur?", editor_options: { image: false, color: false } %>
+            <br>
+        </div>
+    </div>
+  </div>
+  <hr>
+  <div class="form-group">
+    <%= f.submit class: "btn btn-block btn-success" %>
+  </div>
+<% end %>

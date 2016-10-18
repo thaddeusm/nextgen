@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :plans
   def home
     @latest_feed = Feed.order(:id).last
   end
@@ -24,6 +25,16 @@ Rails.application.routes.draw do
   get ':name', to: 'profiles#show', as: :profile
 
   mount Bootsy::Engine => '/bootsy', as: 'bootsy'
+
+  get 'reviews/show'
+
+  resources :reviews do
+    resources :reviews
+  end
+ 
+  resources :plans do
+    resources :reviews
+  end
   
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

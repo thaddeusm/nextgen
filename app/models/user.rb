@@ -6,5 +6,6 @@ class User < ApplicationRecord
     
   has_many :feeds, dependent: :destroy
   has_many :responses, dependent: :destroy
+  has_one :plan
   validates :name, presence: true
 end

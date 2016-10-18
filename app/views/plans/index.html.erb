@@ -2,16 +2,16 @@
     <div class="col-xs-12 col-md-10 col-md-offset-1 footer-space">
         <% if user_signed_in? %>
             <div class="page-header headertitle">
-                <h1>Feeds</h1>
+                <h1>Plans</h1>
             </div>
             <div class="row">
                 <div class="col-xs-12">
-                    <% @feeds.each do |feed| %>
+                    <% @plans.each do |plan| %>
                         <div class="jumbotron feed-index-box">
-                            <h2 class="textsink">"<%= feed.title %>"</h2>
+                            <h2 class="textsink">"<%= plan.topic %>"</h2>
                             <br>
-                            <p>Practice writing <strong><i><%= feed.focus %></i></strong>.</p>
-                            <%= link_to "Dive in", feed, class: "btn btn-danger btn-lg" %>
+                            <p>by <strong><i><%= plan.user.name %></i></strong></p>
+                            <%= link_to "Read More", plan, class: "btn btn-danger btn-lg" %>
                         </div>
                     <% end %>
                 </div>

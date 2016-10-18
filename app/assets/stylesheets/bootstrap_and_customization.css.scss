@@ -38,13 +38,6 @@ html, body {
 }
 
 body {
-/*    background: repeating-linear-gradient(
-  -55deg,
-  #FFFFFF,
-  #F6FEFC 5px,
-  #FFFFFF 5px,
-  #F6FEFC 10px
-);*/
     background-color: #25b8c4;
     background-image: image-url("white-brushed.png");
 }
@@ -238,4 +231,9 @@ hr {
     height: 1px;
     background: #333;
     background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+
+.inactive {
+    background: #d9534f;
+    border-radius: 4px;
 }

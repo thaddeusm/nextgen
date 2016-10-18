@@ -1,0 +1,36 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">by 
+            <% if current_user == review.user %>
+                Me
+            <% else %>
+                <%= review.user.name %>
+            <% end %>
+        </h4> 
+    </div>
+    <div class="panel-body">
+        <div class="well">
+            <%= raw(review.body) %>
+        </div>
+        <p>
+            <% if review.user == current_user or current_user.try(:admin?) %>
+                <%= link_to 'Edit', edit_plan_review_path(@plan, review), class: 'btn btn-success btn-sm' %> | <%= link_to 'Delete', [@plan, review], class: 'btn btn-danger btn-sm', method: :delete, data: { confirm: "Are you sure?" } %>
+            <% end %>
+        </p>
+    </div>
+    <div class="panel-footer">
+        <%= link_to 'Add a Reply', new_review_review_path(review) %>
+    </div>
+</div>
+<% unless review.reviews.empty? %>
+    <div class="row">
+        <div class="col-xs-1 replydiv text-right">
+            <h6><span class="fa fa-mail-reply"></span></h6>
+        </div>
+        <div class="col-xs-11">
+            <div class="indentit">
+                <%= render :partial => 'reviews/review', :collection => review.reviews %>
+            </div>
+        </div>
+    </div>
+<% end %>

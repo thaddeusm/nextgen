@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160906150203) do
+ActiveRecord::Schema.define(version: 20161017134014) do
 
   create_table "bootsy_image_galleries", force: :cascade do |t|
     t.string   "bootsy_resource_type"
@@ -26,6 +26,15 @@ ActiveRecord::Schema.define(version: 20160906150203) do
     t.datetime "updated_at"
   end
 
+  create_table "events", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "action"
+    t.integer  "eventable_id"
+    t.string   "eventable_type"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
   create_table "feeds", force: :cascade do |t|
     t.string   "title"
     t.text     "context",    limit: 60000
@@ -37,6 +46,21 @@ ActiveRecord::Schema.define(version: 20160906150203) do
     t.index ["user_id"], name: "index_feeds_on_user_id"
   end
 
+  create_table "plans", force: :cascade do |t|
+    t.string   "topic"
+    t.text     "goal"
+    t.text     "materials"
+    t.text     "listening"
+    t.text     "speaking"
+    t.text     "reading"
+    t.text     "writing"
+    t.text     "assessment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_plans_on_user_id"
+  end
+
   create_table "responses", force: :cascade do |t|
     t.text     "body"
     t.integer  "commentable_id"
@@ -46,6 +70,17 @@ ActiveRecord::Schema.define(version: 20160906150203) do
     t.integer  "user_id"
     t.index ["commentable_id", "commentable_type"], name: "index_responses_on_commentable_id_and_commentable_type"
     t.index ["user_id"], name: "index_responses_on_user_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.text     "body"
+    t.integer  "commentable_id"
+    t.string   "commentable_type"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.integer  "user_id"
+    t.index ["commentable_id", "commentable_type"], name: "index_reviews_on_commentable_id_and_commentable_type"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

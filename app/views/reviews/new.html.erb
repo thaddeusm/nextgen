@@ -1,0 +1,64 @@
+<div class="centercontainer responsesdiv">
+    <div class="centerrow">
+        <div class="centercolumnresume">
+            <div class="jumbotron"> 
+                <% if @parent.try(:topic?) %>
+                    <h2>
+                        "<%= raw(@parent.topic) rescue nil%>""
+                        <br>
+                        <small><%= @parent.user.name rescue nil %></small>
+                    </h2>
+                    <br>
+                    <p>
+                        <%= raw(@parent.goal) rescue nil %>
+                    </p>
+                    <p>
+                        <%= raw(@parent.materials) rescue nil %>
+                    </p>
+                    <p>    
+                        <%= raw(@parent.listening) rescue nil %>
+                    </p>
+                    <p>
+                        <%= raw(@parent.speaking) rescue nil %>
+                    </p>
+                    <p>
+                        <%= raw(@parent.reading) rescue nil %>
+                    </p>
+                    <p>
+                        <%= raw(@parent.writing) rescue nil %>
+                    </p>
+                    <p>
+                        <%= raw(@parent.assessment) rescue nil %>
+                    </p>
+                <% else %>
+                    <p>
+                        <%= raw(@parent.body) rescue nil %>
+                        <br>
+                        from <i><%= @parent.user.name rescue nil %></i>
+                    </p>
+                <% end %>
+            </div>
+        	<div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="panel-title">Write a Review</h2>
+                </div>
+                <div class="panel-body">
+                    <%= form_for [@parent, @review] do |f| %>
+        				<div class="form-group">
+        					<%= f.bootsy_area :body, class:"form-control", rows: "4", editor_options: { image: false, font_styles: false, color: false } %>
+        				</div>
+        				<div class="form-group">
+        					<%= f.submit class: "btn btn-success btn-block" %>
+						</div>    				
+    				<% end %>
+                </div>
+                <div class="panel-footer">
+                    <%= link_to 'Back', :back %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
