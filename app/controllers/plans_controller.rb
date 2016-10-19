@@ -36,7 +36,7 @@ class PlansController < ApplicationController
 
   def destroy
     @plan.destroy
-      redirect_to plans_url, notice: 'Plan was successfully destroyed.'
+      redirect_to plans_url, notice: 'Your lesson plan was successfully deleted.'
   end
 
   private
