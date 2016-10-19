@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'pages/privacy'
   get 'responses/show'
   get 'responses/edit'
+  get 'teacher/show'
 
   resources :responses do
     resources :responses

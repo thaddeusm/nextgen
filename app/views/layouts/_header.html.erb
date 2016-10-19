@@ -16,18 +16,20 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <% if current_user.plan(@plan) %>
-                    <li>
-                        <%= link_to plan_path(current_user) do %>
-                            <span class="glyphicon glyphicon-file"></span> My Lesson Plan
-                        <% end %>
-                    </li>
-                <% else %>
-                    <li>
-                        <%= link_to new_plan_path do %>
-                            <span class="glyphicon glyphicon-plus"></span> Start Lesson Plan
-                        <% end %>
-                    </li>
+                <% if false %>
+                    <% if current_user.plan(@plan) %>
+                        <li>
+                            <%= link_to plan_path(current_user) do %>
+                                <span class="glyphicon glyphicon-file"></span> My Lesson Plan
+                            <% end %>
+                        </li>
+                    <% else %>
+                        <li>
+                            <%= link_to new_plan_path do %>
+                                <span class="glyphicon glyphicon-plus"></span> Start Lesson Plan
+                            <% end %>
+                        </li>
+                    <% end %>
                 <% end %>
                 <% if current_user.try(:admin?) %>
                     <li>
@@ -53,6 +55,12 @@
                                 <li>
                                     <%= link_to profile_url(current_user.name) do %>
                                         <span class="glyphicon glyphicon-pencil"></span> My Responses
+                                    <% end %>
+                                </li>
+                            <% else %>
+                                <li>
+                                    <%= link_to teacher_show_path do %>
+                                        <span class="glyphicon glyphicon-pencil"></span> Review Responses
                                     <% end %>
                                 </li>
                             <% end %>
