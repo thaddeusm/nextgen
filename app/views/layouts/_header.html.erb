@@ -31,7 +31,7 @@
                         </li>
                     <% end %>
                 <% end %>
-                    <li><a data-toggle="modal" data-target="#videoModal"><span class="glyphicon glyphicon-play-circle"></span> My Lesson Plan</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#videoModal"><span class="glyphicon glyphicon-play-circle"></span> My Lesson Plan</a></li>
                 <% if current_user.try(:admin?) %>
                     <li>
                         <%= link_to new_feed_path do %>
