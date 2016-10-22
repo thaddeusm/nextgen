@@ -30,9 +30,8 @@
                             <% end %>
                         </li>
                     <% end %>
-                <% else %>
-                    <a data-toggle="modal" data-target="#videoModal">My Lesson Plan</a>
                 <% end %>
+                    <li><a data-toggle="modal" data-target="#videoModal">My Lesson Plan</a></li>
                 <% if current_user.try(:admin?) %>
                     <li>
                         <%= link_to new_feed_path do %>
