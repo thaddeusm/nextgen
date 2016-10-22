@@ -30,6 +30,8 @@
                             <% end %>
                         </li>
                     <% end %>
+                <% else %>
+                    <a data-toggle="modal" data-target="#videoModal">My Lesson Plan</a>
                 <% end %>
                 <% if current_user.try(:admin?) %>
                     <li>
@@ -77,3 +79,18 @@
         </div>
     </div>
 </nav>
+
+<div class="modal fade modal-lg" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="glyphicon glyphicon-remove"></span></button>
+      </div>
+      <div class="modal-body">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/1xrAnEvJvKU" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
