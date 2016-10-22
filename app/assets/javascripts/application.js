@@ -21,9 +21,10 @@ $(document).ready(function() {
     setTimeout(function() {
         $(".alert").alert('close');
     }, 4000);
-});
 
-jQuery('#videoModal').on('hidden.bs.modal', function (e) {
+    jQuery('#videoModal').on('hidden.bs.modal', function (e) {
   // do something...
   jQuery('#videoModal iframe').attr("src", jQuery("#videoModal  iframe").attr("src"));
 });
+});
+
