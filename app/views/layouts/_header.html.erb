@@ -16,22 +16,19 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <% if false %>
-                    <% if current_user.plan(@plan) %>
-                        <li>
-                            <%= link_to plan_path(current_user) do %>
-                                <span class="glyphicon glyphicon-file"></span> My Lesson Plan
-                            <% end %>
-                        </li>
-                    <% else %>
-                        <li>
-                            <%= link_to new_plan_path do %>
-                                <span class="glyphicon glyphicon-plus"></span> Start Lesson Plan
-                            <% end %>
-                        </li>
-                    <% end %>
+                <% if current_user.plan(@plan) %>
+                    <li>
+                        <%= link_to plan_path(current_user) do %>
+                            <span class="glyphicon glyphicon-file"></span> My Lesson Plan
+                        <% end %>
+                    </li>
+                <% else %>
+                    <li>
+                        <%= link_to new_plan_path do %>
+                            <span class="glyphicon glyphicon-plus"></span> Start Lesson Plan
+                        <% end %>
+                    </li>
                 <% end %>
-                    <li><a href="#" data-toggle="modal" data-target="#videoModal"><span class="glyphicon glyphicon-play-circle"></span> My Lesson Plan</a></li>
                 <% if current_user.try(:admin?) %>
                     <li>
                         <%= link_to new_feed_path do %>
@@ -78,18 +75,3 @@
         </div>
     </div>
 </nav>
-
-<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="glyphicon glyphicon-remove"></span></button>
-      </div>
-      <div class="modal-body">
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/DNHE5QbRQuQ" frameborder="0" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
