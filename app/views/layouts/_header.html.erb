@@ -18,7 +18,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <% if current_user.plan(@plan) %>
                     <li>
-                        <%= link_to plan_path(current_user) do %>
+                        <%= link_to plan_path(@current_user) do %>
                             <span class="glyphicon glyphicon-file"></span> My Lesson Plan
                         <% end %>
                     </li>
