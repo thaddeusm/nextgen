@@ -24,7 +24,7 @@
                     </h1>
                 </div>
                     <div class="well">
-                        <p>Following Ivan's great suggestion, <%= link_to "here is an example lesson plan for your use or amusement", plan_path(@user.admin) %>.</p>
+                        <p>Following Ivan's great suggestion, <%= link_to "here is an example lesson plan for your use or amusement", plan_path(@user.name === "Thaddeus McCleary") %>.</p>
                     </div>
                     <br>
                     <p class="text-center">
