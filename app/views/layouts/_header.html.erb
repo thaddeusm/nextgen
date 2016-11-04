@@ -36,13 +36,11 @@
                         <% end %>
                     </li>
                 <% end %>
-                <% if current_user.try(:admin?) %>
-                    <li>
-                        <%= link_to new_feed_path do %>
-                            <span class="glyphicon glyphicon-plus"></span> New Feed
-                        <% end %>
-                    </li>
-                <% end %>
+                <li>
+                    <%= link_to new_feed_path do %>
+                        <span class="glyphicon glyphicon-plus"></span> New Feed
+                    <% end %>
+                </li>
                 <% if user_signed_in? %>
                     <li>
                         <%= link_to feeds_path do %>

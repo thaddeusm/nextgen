@@ -24,7 +24,7 @@
             <br>
             <br>
             <div class="btn-group btn-group-justified">
-                <% if current_user.try(:admin?) %>
+                <% if current_user === @feed.user(@feed) or current_user.try(:admin?) %>
                     <%= link_to 'Back', feeds_path, class: "btn btn-info" %>
                     <%= link_to 'Edit', edit_feed_path(@feed), class: "btn btn-success" %>
                     <%= link_to 'Delete', @feed, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>

@@ -1,4 +1,4 @@
-<% if current_user.try(:admin?) %>
+<% if user_signed_in? %>
     <div class="centercontainer responsesdiv">
         <div class="centerrowfeeds">
             <div class="centercolumnfeeds">
@@ -17,8 +17,17 @@
         </div>
     </div>
 <% else %>
-    <div class="jumbotron">
-        <h1>Not authorized.</h1>
-        <p><%= link_to "Go Back", root_path, class: "btn btn-info" %></p>
-    </div>
+    <div class="page-header text-center">
+                    <div class="animated flipInX">
+                        <%= image_tag('justg.png', :alt => "Brand", :class => "inline-block pageimage") %>
+                    </div>
+                    <h1>
+                        <span class="headertitle">Generation Next</span>
+                        <br>
+                        <small class="textsink"><i>companion app</i></small>
+                    </h1>
+                </div>
+                    <p class="text-center">
+                        <%= link_to "Get Started", new_user_registration_path, class: "btn btn-warning" %> or <%= link_to "Log in", new_user_session_path, class: "textpop" %>
+                    </p>
 <% end %>

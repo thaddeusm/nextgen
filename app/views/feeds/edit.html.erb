@@ -1,4 +1,4 @@
-<% if current_user.try(:admin?) %>
+<% if current_user === @feed.user(@feed) or current_user.try(:admin?) %>
     <div class="centercontainer responsesdiv">
         <div class="centerrowfeeds">
             <div class="centercolumnfeeds">
