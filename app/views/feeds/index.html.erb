@@ -14,6 +14,10 @@
                             <%= link_to "Dive in", feed, class: "btn btn-danger" %>
                         </div>
                     <% end %>
+                    <br>
+                    <%= link_to new_feed_path do %>
+                        <button class="btn btn-success btn-block"><span class="glyphicon glyphicon-plus"></span></button>
+                    <% end %>
                 </div>
             </div>
         <% else %>

@@ -19,7 +19,7 @@
                 <% if current_user.plan(@plan) %>
                     <li>
                         <%= link_to current_user.plan(@plan) do %>
-                            <span class="glyphicon glyphicon-file"></span> My Lesson Plan
+                            <span class="glyphicon glyphicon-file"></span> My Plan
                         <% end %>
                     </li>
                 <% else %>
@@ -32,15 +32,17 @@
                 <% if user_signed_in? %>
                     <li>
                         <%= link_to plans_path do %>
-                            <span class="glyphicon glyphicon-book"></span> View Lesson Plans
+                            <span class="glyphicon glyphicon-book"></span> Plans
                         <% end %>
                     </li>
                 <% end %>
-                <li>
-                    <%= link_to new_feed_path do %>
-                        <span class="glyphicon glyphicon-plus"></span> New Feed
-                    <% end %>
-                </li>
+                <% if current_user.try(:admin?) %>
+                    <li>
+                        <%= link_to new_feed_path do %>
+                            <span class="glyphicon glyphicon-plus"></span> New Feed
+                        <% end %>
+                    </li>
+                <% end %>
                 <% if user_signed_in? %>
                     <li>
                         <%= link_to feeds_path do %>
